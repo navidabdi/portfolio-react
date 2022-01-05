@@ -1,4 +1,5 @@
-import react from "react";
+import React from "react";
+import ScrollTop from "../components/ScrollTop";
 // Import The About Page Components
 import AboutSection from "../components/AboutSection";
 import ServicesSection from "../components/ServicesSection";
@@ -12,6 +13,7 @@ const AboutUs = () => {
       <AboutSection />
       <ServicesSection />
       <FaqSection />
+      <ScrollTop />
     </motion.div>
   );
 };
