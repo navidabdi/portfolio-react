@@ -1,4 +1,5 @@
-import react from "react";
+import React from "react";
+import { useScroll } from "./useScroll";
 import home2 from "../img/home2.png";
 
 import clock from "../img/clock.svg";
@@ -7,10 +8,16 @@ import money from "../img/money.svg";
 import teamwork from "../img/teamwork.svg";
 import styled from "styled-components";
 import { StyleLayout } from "../styles";
-
+import { scrollReveal } from "../animation";
 const ServicesSection = () => {
+  const [element, controls] = useScroll();
   return (
-    <Services>
+    <Services
+      ref={element}
+      variants={scrollReveal}
+      animate={controls}
+      initial="hidden"
+    >
       <div className="image">
         <img src={home2} alt="camera" />
       </div>
@@ -49,16 +56,15 @@ const ServicesSection = () => {
           </div>
         </div>
       </div>
-      
     </Services>
   );
 };
 
 const Services = styled(StyleLayout)`
-  h2{
+  h2 {
     padding-bottom: 4rem;
   }
-  p{
+  p {
     font-size: 1.1rem;
     width: 70%;
     padding: 1.5rem 0 4rem 0;
@@ -66,7 +72,6 @@ const Services = styled(StyleLayout)`
   .cards {
     display: flex;
     flex-wrap: wrap;
-    
   }
   .card {
     flex: 1 1 50%;
@@ -77,7 +82,7 @@ const Services = styled(StyleLayout)`
         margin-left: 1rem;
         background: white;
         color: #1b1b1b;
-        padding: .4rem;
+        padding: 0.4rem;
       }
     }
   }
