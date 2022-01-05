@@ -11,6 +11,9 @@ import { StyleLayout } from "../styles";
 const ServicesSection = () => {
   return (
     <Services>
+      <div className="image">
+        <img src={home2} alt="camera" />
+      </div>
       <div className="description">
         <h2>
           High <span>quality</span> services
@@ -46,9 +49,7 @@ const ServicesSection = () => {
           </div>
         </div>
       </div>
-      <div className="image">
-        <img src={home2} alt="camera" />
-      </div>
+      
     </Services>
   );
 };
