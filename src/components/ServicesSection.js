@@ -5,10 +5,12 @@ import clock from "../img/clock.svg";
 import diaphragm from "../img/diaphragm.svg";
 import money from "../img/money.svg";
 import teamwork from "../img/teamwork.svg";
+import styled from "styled-components";
+import { StyleLayout } from "../styles.js";
 
 const ServicesSection = () => {
   return (
-    <div className="services">
+    <Services>
       <div className="description">
         <h2>
           High <span>quality</span> services
@@ -47,8 +49,37 @@ const ServicesSection = () => {
       <div className="image">
         <img src={home2} alt="camera" />
       </div>
-    </div>
+    </Services>
   );
 };
+
+const Services = styled(StyleLayout)`
+  h2{
+    padding-bottom: 4rem;
+  }
+  p{
+    font-size: 1.1rem;
+    width: 70%;
+    padding: 1.5rem 0 4rem 0;
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+  .card {
+    flex: 1 1 50%;
+    .icon {
+      display: flex;
+      align-items: center;
+      h3 {
+        margin-left: 1rem;
+        background: white;
+        color: #1b1b1b;
+        padding: .4rem;
+      }
+    }
+  }
+`;
 
 export default ServicesSection;
