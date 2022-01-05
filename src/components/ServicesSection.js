@@ -6,7 +6,7 @@ import diaphragm from "../img/diaphragm.svg";
 import money from "../img/money.svg";
 import teamwork from "../img/teamwork.svg";
 import styled from "styled-components";
-import { StyleLayout } from "../styles.js";
+import { StyleLayout } from "../styles";
 
 const ServicesSection = () => {
   return (
