@@ -17,9 +17,13 @@ import {
   lineAnimate,
   slider,
   sliderContainer,
+  scrollReveal,
 } from "../animation";
+import { useScroll } from "../components/useScroll";
 
 const OurWork = () => {
+  const [element, controls] = useScroll();
+  const [element2, controls2] = useScroll();
   return (
     <StyledWork
       variants={pageAnimation}
@@ -33,6 +37,7 @@ const OurWork = () => {
         <motion.div variants={slider} className="frame-3"></motion.div>
         <motion.div variants={slider} className="frame-4"></motion.div>
       </motion.div>
+
       <div className="movie">
         <motion.h2 variants={fade}>The Athlete</motion.h2>
         <motion.div variants={lineAnimate} className="line"></motion.div>
@@ -40,20 +45,34 @@ const OurWork = () => {
           <motion.img variants={photoAnimate} src={athlete} alt="athlete" />
         </Link>
       </div>
-      <div className="movie">
+
+      <motion.div
+        className="movie"
+        ref={element}
+        variants={scrollReveal}
+        animate={controls}
+        initial="hidden"
+      >
         <motion.h2 variants={fade}>The Racer</motion.h2>
-        <motion.div className="line"></motion.div>
+        <motion.div variants={lineAnimate} className="line"></motion.div>
         <Link to="/work/theracer">
           <motion.img variants={photoAnimate} src={theracer} alt="theracer" />
         </Link>
-      </div>
-      <div className="movie">
+      </motion.div>
+
+      <motion.div
+        className="movie"
+        ref={element2}
+        variants={scrollReveal}
+        animate={controls2}
+        initial="hidden"
+      >
         <motion.h2 variants={fade}>Good Times</motion.h2>
-        <motion.div className="line"></motion.div>
+        <motion.div variants={lineAnimate} className="line"></motion.div>
         <Link to="/work/good-times">
           <motion.img variants={photoAnimate} src={goodtimes} alt="goodtimes" />
         </Link>
-      </div>
+      </motion.div>
     </StyledWork>
   );
 };
