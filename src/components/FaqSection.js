@@ -65,7 +65,7 @@ const Faq = styled(StyleLayout)`
   }
   .faq-line {
     background: #ccc;
-    height: 0.2rem;
+    height: 0.15rem;
     margin: 1rem 0;
     width: 100%;
   }
@@ -73,7 +73,7 @@ const Faq = styled(StyleLayout)`
     padding: 1rem 0;
     cursor: pointer;
     h4 {
-      font-size: 2rem;
+      font-size: 1.4rem;
     }
   }
   .answer {

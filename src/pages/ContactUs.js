@@ -45,7 +45,7 @@ const ContactUs = () => {
 };
 
 const StyledContact = styled(motion.div)`
-  padding: 5rem 10rem;
+  padding: 5rem 0;
   color: white;
   min-height: 90vh;
   .title {

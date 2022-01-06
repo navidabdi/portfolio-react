@@ -21,7 +21,7 @@ const ServicesSection = () => {
       <div className="image">
         <img src={home2} alt="camera" />
       </div>
-      <div className="description">
+      <div className="description right">
         <h2>
           High <span>quality</span> services
         </h2>
@@ -31,28 +31,28 @@ const ServicesSection = () => {
               <img src={clock} alt="icon" />
               <h3>Efficient</h3>
             </div>
-            <p>Lorem ipsum, dolor sit amet.</p>
+            <p>Lorem ipsum, dolor sit amet. Lorem ipsum</p>
           </div>
           <div className="card">
             <div className="icon">
               <img src={teamwork} alt="icon" />
               <h3>Teamwork</h3>
             </div>
-            <p>Lorem ipsum, dolor sit amet.</p>
+            <p>Lorem ipsum, dolor sit amet. Lorem ipsum</p>
           </div>
           <div className="card">
             <div className="icon">
               <img src={diaphragm} alt="icon" />
               <h3>Diaphragm</h3>
             </div>
-            <p>Lorem ipsum, dolor sit amet.</p>
+            <p>Lorem ipsum, dolor sit amet. Lorem ipsum</p>
           </div>
           <div className="card">
             <div className="icon">
               <img src={money} alt="icon" />
               <h3>Affordable</h3>
             </div>
-            <p>Lorem ipsum, dolor sit amet.</p>
+            <p>Lorem ipsum, dolor sit amet. Lorem ipsum</p>
           </div>
         </div>
       </div>
@@ -61,12 +61,14 @@ const ServicesSection = () => {
 };
 
 const Services = styled(StyleLayout)`
+  .description.right {
+    padding-left: 3rem;
+  }
   h2 {
     padding-bottom: 4rem;
   }
   p {
     font-size: 1.1rem;
-    width: 70%;
     padding: 1.5rem 0 4rem 0;
   }
   .cards {
@@ -75,6 +77,7 @@ const Services = styled(StyleLayout)`
   }
   .card {
     flex: 1 1 50%;
+    padding-right: 2rem;
     .icon {
       display: flex;
       align-items: center;

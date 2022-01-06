@@ -48,6 +48,16 @@ p {
     font-size: 1.4rem;
     line-height: 150%;
 }
+.container{
+    max-width: 85%;
+    margin: auto;
+}
+
+@media screen and (max-width: 1500px) {
+  html {
+    font-size: 80%;
+  }
+}
 
 `;
 export default GlobalStyle;

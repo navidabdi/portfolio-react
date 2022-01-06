@@ -82,7 +82,7 @@ const OurWork = () => {
 const StyledWork = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
-  padding: 5rem 10rem;
+  padding: 5rem 0;
   .movie {
     padding-bottom: 10rem;
     h2 {
