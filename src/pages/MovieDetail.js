@@ -32,7 +32,7 @@ const MovieDetail = () => {
           </div>
           <div className="awards">
             {movie.awards.map((award) => (
-              <Award title={award.title} description={award.description} />
+              <Award key={award.title} title={award.title} description={award.description} />
             ))}
           </div>
           <div className="image-display">
