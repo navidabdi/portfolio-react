@@ -2,7 +2,6 @@ import React from "react";
 import home1 from "../img/home1.png";
 import Wave from "./Wave";
 // Styled
-import styled from "styled-components";
 import { StyleLayout } from "../styles.js";
 
 // Frame Motion
